@@ -10,7 +10,7 @@ from torchvision.transforms import Resize, InterpolationMode
 from math import copysign
 from .ImageMasker import ImageMasker
 from .transformer import create_bbox_transformer
-from .utils import scale_bboxess
+from .utils import scale_bboxes
 import torch
 import itertools
 from torchvision.transforms import ToTensor
