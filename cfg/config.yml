@@ -1,0 +1,47 @@
+# Prevent hydra from taking over working dir
+hydra:
+  run:
+    dir: .
+  output_subdir: null
+
+hydra/job_logging: disabled
+hydra/hydra_logging: disabled
+
+defaults:
+  - env: framestacking.yml
+  - data: icdar.yml
+  - reward: tightness_aware.yml
+
+neptune:
+  offline: true
+  project: "user/project"
+  run_name: "experiment"
+  run_id: null
+
+training:
+  random_seed: 20302
+  batch_size: 32
+  lr: 0.0001
+  backbone: resnet18
+  envs_per_worker: 1
+  loss:
+    gamma: 0.95
+  epsilon:
+    start: 1
+    end: 0.1
+    decay_steps: 300000
+  replay_buffer_size: 20000
+  iterations: 5000
+  eval_iterations: 300
+
+assessor:
+  data_path: null
+  checkpoint: null
+  dual_image: false
+  output: 1
+
+log_dir: ~/ray_results
+
+restore: null
+
+compress_observations: true

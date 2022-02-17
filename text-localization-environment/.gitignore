@@ -1,0 +1,6 @@
+.idea/
+.vscode/
+dist/
+venv/
+text_localization_environment.egg-info/
+text_localization_environment/__pycache__/
