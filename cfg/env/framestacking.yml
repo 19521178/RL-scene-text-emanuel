@@ -1,0 +1,24 @@
+# @package _group_
+random_seed: 20301
+
+steps_per_image: 100
+
+max_reward: 200
+
+full_playout: false
+
+premasking: true
+
+premasking_decay: null
+
+termination: false
+
+framestacking_mode: grayscale
+
+eval_full_playout: false
+
+bbox_scaling_width: 0
+
+bbox_scaling_height: 0
+
+ior_mode: cross
